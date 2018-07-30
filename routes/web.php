@@ -26,3 +26,7 @@ Route::get('/basic-arithmetic/{operation}/{num1}/{num2}', function($operation,$n
 			  'div'=>$div=$num1/$num2
 			));
 })->name('basic-arithmetic');
+
+Route::get('/middleware/{age}', function ($age){
+	return view('age', array('age'=>$age));
+});
